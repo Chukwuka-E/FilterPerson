@@ -1,8 +1,8 @@
-// Define a generic filterPersons function that returns different types based on personType
+
 function filterPersons(persons, personType) {
     return persons.filter(function (person) { return person.type === personType; });
 }
-// Usage examples
+// some examples
 var usersAndAdmins = [
     { type: 'user', name: 'chimobim', age: 6 },
     { type: 'admin', name: 'chizaram', role: 'Manager' },
