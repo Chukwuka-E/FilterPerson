@@ -1,4 +1,4 @@
-// Define User and Admin types
+
 interface User {
       type: 'user';
       name: string;
@@ -11,10 +11,10 @@ interface User {
       role: string;
      }
      
-     // Create a utility type to exclude the 'type' field from an object
+     
      type ExcludeType<T> = Omit<T, 'type'>;
      
-     // Define a generic filterPersons function that returns different types based on personType
+     
      function filterPersons<T extends 'user' | 'admin'>(
       persons: (User | Admin)[],
       personType: T
@@ -22,7 +22,7 @@ interface User {
       return persons.filter((person) => person.type === personType) as any;
      }
      
-     // Usage examples
+    // some examples
      const usersAndAdmins: (User | Admin)[] = [
       { type: 'user', name: 'Chimobim', age: 6 },
       { type: 'admin', name: 'chizaram', role: 'Manager' },
